@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header class="text-center monster-head">
+      <div class="container">
+        <h1 class="head">Space Monsters</h1>
+      </div>
+      <div class="container">
+        <div class="split">
+          <div class="audio">
+            <audio controls autoplay hidden loop>
+              <!-- <source src="./assets/retro.mp3" type="audio/mp3" /> -->
+            </audio>
+            🔊
+          </div>
+          <div class="home">
+            <a class="home audio" href="./index.html"> 🏠 </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="main-content">
+      <div class="container text-center">
+        <div class="split">
+          <h2><a id="parrot" href="/parrot.html">parrot</a></h2>
+          <h2><a id="fish" href="/fish.html">fish</a></h2>
+          <h2><a id="lion" href="/lion.html">lion</a></h2>
+        </div>
+        <div class="split">
+          <h2>
+            <a id="elephant" href="/elephant.html">elephant</a>
+          </h2>
+          <h2>
+            <a id="tortise" href="./tortise.html">tortoise</a>
+          </h2>
+          <h2><a id="turtle" href="./turtle.html">turtle</a></h2>
+        </div>
+      </div>
+    </section>
+    <script>
+      const sound = document.querySelector(".audio");
+
+      sound.addEventListener("click", () => {
+        sound.children[0].muted = !sound.children[0].muted;
+      });
+    </script>
+  </body>
+</html>

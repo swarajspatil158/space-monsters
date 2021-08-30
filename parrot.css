@@ -1,0 +1,361 @@
+:root{
+    --blue: #1e90ff;
+    --yellow:rgb(255, 196, 0);
+    --orange:rgb(255, 60, 0);
+    --byellow:rgb(255, 230, 0);
+    --borange:rgb(255, 145, 0);
+    --greyish:rgb(218, 133, 100);
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .audio{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:20px;
+    left:20px;
+    background-color: #6e12d8;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }
+
+
+  .home{
+    width: 40px;
+    height: 40px;
+    left:80px;
+  }
+  
+  .ship {
+    position: absolute;
+    width: 150px;
+    height: 58px;
+    bottom: 50px;
+    left: 50px;
+    background-image: url("./assets/ship.png");
+    background-size: cover;
+  
+  }
+  
+  .block{
+    border-radius: 5px;
+  }
+  
+  .trans{
+    box-shadow:none;
+    display: none;
+  }
+  
+  body {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .container {
+    width: 60vw;
+    height: 100vh;
+    background-image: url("./assets/space.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+  }
+
+  .leftCol,.rightCol{
+    position:absolute;
+    top:0;
+    left:0;
+    width:20vw;
+    height:100vh;
+    border-right:4px solid #1e90ff;
+    background-image: url("assets/rain2.gif");
+    background-size: cover;
+  
+  }
+  
+  .rightCol {
+    left: 80vw;
+    border-left: 4px solid #1e90ff;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+  
+  }
+  .rightCol > h1 {
+    color:blue;
+    font-family: "Luckiest guy", cursive;
+    margin-top: 20px;
+    text-shadow: 0 0 5px blue;
+  }
+  
+  .score {
+    /* color:#000; */
+    color: blue;
+    font-family: "Luckiest guy", cursive;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  }
+  .ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(160, 160, 160);
+    box-shadow:0 0 10px  rgb(255,255,255);
+  }
+
+  .parrot {
+    width:35vw;
+    min-width: 600px;
+    height: 30vw;
+    min-height: 600px;
+    display: grid;
+    gap:5px;
+    grid-template-columns: repeat(1fr,20);
+    grid-template-rows: repeat(1fr,20);
+    margin-left:auto;
+    margin-right:auto;
+  }
+    
+  
+  #a{
+    grid-column: 7/11;
+    grid-row: 3/4;
+    background-color: #FD3D6C;
+  box-shadow:0 0 20px #FD3D6C;
+
+  }
+  /*  */
+  #b{
+    grid-column: 7/8;
+    grid-row: 4/5;
+    background-color:#FD3D6C;
+  box-shadow:0 0 20px #FD3D6C;
+
+  }
+  /*  */
+  #c{
+    grid-column: 8/10;
+    grid-row: 4/5;
+    box-shadow:0 0 20px #C4C4C4 ;
+    background-color:#C4C4C4 ;
+  }
+  
+  #d{
+    grid-column: 10/11;
+    grid-row: 4/5;
+    background-color: #FD3D6C;
+  box-shadow:0 0 20px #FD3D6C;
+
+  }
+  /*  */
+  #e{
+    grid-column: 6/8;
+    grid-row: 5/7;
+    background-color: #FA954C;
+    box-shadow:0 0 20px #FA954C;
+
+  }
+  #f{
+    grid-column: 9/10;
+    grid-row: 5/6;
+    background-color:#C4C4C4;
+    box-shadow:0 0 20px #C4C4C4;
+
+  }
+  #g{
+    grid-column: 10/11;
+      grid-row: 5/6;
+    background-color: #FD3D6C;
+    box-shadow:0 0 20px #FD3D6C;
+
+  }
+  #h{
+    grid-column: 8/10;
+    grid-row: 6/7;
+    background-color:#C4C4C4 ;
+    box-shadow:0 0 20px #C4C4C4 ;
+
+  }
+  #i{
+    grid-column: 10/11;
+    grid-row: 6/9;
+    background-color: #FD3D6C;
+    box-shadow:0 0 20px #FD3D6C;
+
+  }
+  /*  */
+  #j{
+    grid-column: 6/7;
+    grid-row: 7/8;
+    background-color:#FA954C ;
+    box-shadow:0 0 20px #FA954C ;
+
+  }
+  #k{
+    grid-column: 7/10;
+    grid-row: 7/8;
+    background-color: #FD3D6C;
+    box-shadow:0 0 20px #FD3D6C;
+
+  }
+  #l{
+    grid-column: 8/10;
+    grid-row: 8/9;
+    background-color:#FD3D6C ;
+    box-shadow:0 0 20px #FD3D6C ;
+  }
+  /*  */
+  #m{
+    grid-column: 11/12;
+    grid-row: 8/9;
+    background-color:#FD3D6C ;
+    box-shadow:0 0 20px #FD3D6C ;
+
+  }
+  #n{
+    grid-column: 7/10;
+    grid-row: 9/10;
+    background-color: #FD3D6C;
+    box-shadow:0 0 20px #FD3D6C;
+
+  }
+  #o{
+    grid-column: 10/12;
+    grid-row: 9/10;
+    background-color: #F4ED34;
+    box-shadow:0 0 20px  #F4ED34;
+
+  }
+  /*  */
+  #p{
+    grid-column: 7/11;
+    grid-row: 10/11;
+    background-color:#FD3D6C ;
+    box-shadow:0 0 20px #FD3D6C ;
+
+  }
+  #q{
+    grid-column: 11/13;
+    grid-row: 10/11;
+    background-color: #F4ED34;
+    box-shadow:0 0 20px #F4ED34;
+
+  }
+  /*  */
+  #r{
+    grid-column: 7/11;
+    grid-row: 11/12;
+    background-color: #FD3D6C;
+    box-shadow:0 0 20px #FD3D6C;
+
+  }
+  #s{
+    grid-column: 11/13;
+    grid-row: 11/12;
+    background-color:#F4ED34 ;
+    box-shadow:0 0 20px #F4ED34 ;
+
+  }
+  #t{
+    grid-column: 7/11;
+    grid-row: 12/13;
+    background-color: #FD3D6C ;
+    box-shadow:0 0 20px #FD3D6C ;
+
+  }
+  #u{
+    grid-column: 11/14;
+    grid-row: 12/13;
+    background-color:  #3BA9FE;
+    box-shadow:0 0 20px #3BA9FE;
+
+  }
+  /*  */
+  #v{
+    grid-column: 8/11;
+    grid-row: 13/14;
+    background-color: #FD3D6C ;
+    box-shadow:0 0 20px #FD3D6C ;
+
+  }
+  #w{
+    grid-column: 11/13;
+    grid-row: 13/14;
+    background-color:#A21DFF;
+    box-shadow:0 0 20px #A21DFF; 
+
+  }
+  #x{
+    grid-column: 13/14;
+    grid-row: 13/14;
+    background-color:  #3BA9FE;
+    box-shadow:0 0 20px #3BA9FE;
+
+  }
+  #y{
+    grid-column: 7/8;
+    grid-row: 14/15;
+    background-color: #FA954C;
+    box-shadow:0 0 20px #FA954C;
+
+  }
+  #z{
+    grid-column: 9/12;
+    grid-row: 14/15;
+    background-color:  #FD3D6C;
+    box-shadow:0 0 20px   #FD3D6C;
+
+  }
+  #a1{
+    grid-column: 12/15;
+    grid-row: 14/15;
+    background-color:  #A21DFF;
+    box-shadow:0 0 20px #A21DFF;
+
+  }
+  #a2{
+    grid-column: 8/11;
+    grid-row: 15/16;
+    background-color:  #FA954C;
+    box-shadow:0 0 20px #FA954C;;
+  }
+  
+  #az{
+    grid-column: 19/20;
+    grid-row: 19/20;
+    background-color: transparent;
+  }
+  
+  #az1{
+    grid-column: 13/15;
+    grid-row: 15/16;
+    background-color: #9EFF34;
+    box-shadow:0 0 20px #9EFF34;
+  }
+  
+  #az2{
+    grid-column: 13/15;
+    grid-row: 16/17;
+    background-color: #9EFF34;
+    box-shadow:0 0 20px #9EFF34;
+  
+  }
+  
+  #az3{
+  
+    grid-column: 14/15;
+    grid-row: 17/18;
+    background-color: #9EFF34;
+    box-shadow:0 0 20px #9EFF34;
+  
+  }

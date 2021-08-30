@@ -1,0 +1,319 @@
+:root{
+    --blue: #1e90ff;
+    --yellow:rgb(255, 196, 0);
+    --orange:rgb(255, 60, 0);
+    --byellow:rgb(255, 230, 0);
+    --borange:rgb(255, 145, 0);
+    --greyish:rgb(218, 133, 100);
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .audio{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:20px;
+    left:20px;
+    background-color: #6e12d8;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }
+
+
+  .home{
+    width: 40px;
+    height: 40px;
+    left:80px;
+  }
+  
+  .ship {
+    position: absolute;
+    width: 150px;
+    height: 58px;
+    bottom: 50px;
+    left: 50px;
+    background-image: url("./assets/ship.png");
+    background-size: cover;
+  
+  }
+  
+  .rightCol {
+    left: 80vw;
+    border-left: 4px solid #1e90ff;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .rightCol > h1 {
+    color:blue;
+    font-family: "Luckiest guy", cursive;
+    margin-top: 20px;
+    text-shadow: 0 0 5px blue;
+  }
+  
+  .score {
+    /* color:#000; */
+    color: blue;
+    font-family: "Luckiest guy", cursive;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  }
+  
+
+  .block{
+    border-radius: 5px;
+  }
+  
+  .trans{
+    box-shadow:none;
+    display: none;
+  }
+  
+  body {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .container {
+    width: 60vw;
+    height: 100vh;
+    background-image: url("./assets/space.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+  }
+
+  .leftCol,.rightCol{
+    position:absolute;
+    top:0;
+    left:0;
+    width:20vw;
+    height:100vh;
+    border-right:4px solid #1e90ff;
+    background-image: url("assets/rain2.gif");
+    background-size: cover;
+  
+  }
+  
+  .rightCol{
+    left:80vw;
+    border-left: 4px solid #1e90ff;
+    border-right: none;
+  }
+  
+  .ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(160, 160, 160);
+    box-shadow:0 0 10px  rgb(255,255,255);
+  }
+
+  .turtle {
+    width:35vw;
+    min-width: 600px;
+    height: 30vw;
+    min-height: 600px;
+    display: grid;
+    gap:5px;
+    grid-template-columns: repeat(1fr,20);
+    grid-template-rows: repeat(1fr,20);
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  #a{
+    grid-column: 11/13;
+    grid-row: 3/4;
+    background-color: #38A951;
+    box-shadow: 0 0 10px #38A951;
+    box-shadow: 0 0 10px #38A951;
+  }
+  /*  */
+  #b{
+    grid-column: 10/11;
+    grid-row: 4/5;
+    background-color:#38A951; 
+    box-shadow: 0 0 10px #38A951;    
+  }
+  /*  */
+  #c{
+    grid-column: 11/12;
+    grid-row: 4/5;
+    background-color:#030303 ;
+    box-shadow: 0 0 10px #38A951;   
+    
+  }
+  
+  #d{
+    grid-column: 12/14;
+
+    box-shadow: 0 0 10px #38A951;    grid-row: 4/5;
+    background-color: #38A951; 
+  }
+  /*  */
+  #e{
+    grid-column: 10/12;
+
+    box-shadow: 0 0 10px #38A951;    grid-row: 5/6;
+    background-color: #38A951;
+  }
+  #f{
+    grid-column: 12/14;
+
+    box-shadow: 0 0 10px #38A951;    grid-row: 5/6;
+    background-color:#38A951;
+  }
+  #g{
+    grid-column: 10/12;
+      grid-row: 6/7;
+
+    box-shadow: 0 0 10px #38A951;    background-color: #38A951;
+  }
+  #h{
+    grid-column: 12/14;
+    grid-row: 6/7;
+
+    box-shadow: 0 0 10px #38A951;    background-color:#38A951 ;
+  }
+  #i{
+    grid-column: 14/15;
+    grid-row: 5/6;
+    background-color: #91DA99;
+    box-shadow: 0 0 10px #38A951;
+  }
+  /*  */
+  #j{
+    grid-column: 14/15;
+    grid-row: 6/7;
+    background-color:#91DA99 ;
+    box-shadow: 0 0 10px #38A951;
+  }
+  #k{
+    grid-column: 11/13;
+    grid-row: 7/8;
+    background-color: #74AB19;
+    box-shadow: 0 0 10px #38A951;
+  }
+  #l{
+    grid-column: 11/13;
+    grid-row: 8/9;
+    background-color:#74AB19 ;
+    box-shadow: 0 0 10px #74AB19 ;
+  }
+  /*  */
+  #m{
+    grid-column: 11/13;
+    grid-row: 9/10;
+    background-color:#74AB19 ;
+    box-shadow: 0 0 10px #74AB19 ;
+  }
+  #n{
+    grid-column: 11/13;
+    grid-row: 10/11;
+    background-color: #74AB19;
+    box-shadow: 0 0 10px #74AB19 ;
+  }
+  #o{
+    grid-column: 11/13;
+    grid-row: 11/12;
+    background-color: #74AB19;
+    box-shadow: 0 0 10px #74AB19 ;
+  }
+  /*  */
+  #p{
+    grid-column: 11/13;
+    grid-row: 12/13;
+    background-color:#74AB19 ;
+    box-shadow: 0 0 10px #74AB19 ;
+  }
+  #q{
+    grid-column: 8/10;
+    grid-row: 11/12;
+    background-color: #74AB19;
+    box-shadow: 0 0 10px #74AB19 ;
+  }
+   
+   #r{
+    grid-column: 5/11;
+    grid-row: 12/13;
+    background-color: #1F7523;
+    box-shadow: 0 0 10px #1F7523 ;
+  }
+  #s{
+    grid-column: 5/11;
+    grid-row: 13/14;
+    background-color:#1F7523 ;
+    box-shadow: 0 0 10px #1F7523 ;
+  }
+  #t{
+    grid-column: 11/14;
+    grid-row: 13/14;
+    background-color:#74AB19 ;
+    box-shadow: 0 0 10px #74AB19;
+  }
+  #u{
+    grid-column: 11/14;
+    grid-row: 14/15;
+    background-color:#74AB19  ;
+    box-shadow: 0 0 10px #74AB19;
+  }
+  
+  #v{
+    grid-column: 4/11;
+    grid-row: 14/15;
+    background-color: #74AB19 ;
+    box-shadow: 0 0 10px #74AB19;
+  }
+  #w{
+    grid-column: 4/6;
+    grid-row: 15/16;
+    background-color:#1F7523;
+    box-shadow: 0 0 10px #1F7523 ;
+  }
+  #x{
+    grid-column: 4/6;
+    grid-row: 16/17;
+    background-color: #1F7523 ;
+    box-shadow: 0 0 10px #1F7523 ;
+  }
+  #y{
+    grid-column: 10/12;
+    grid-row: 15/16;
+    background-color:#1F7523 ;
+    box-shadow: 0 0 10px #1F7523 ;
+  }
+  #z{
+    grid-column: 10/12;
+    grid-row: 16/17;
+    background-color:#1F7523  ;
+    box-shadow: 0 0 10px #1F7523 ;
+  }
+  #a1{
+    grid-column: 13/14;
+    grid-row: 15/17;
+    background-color:#1F7523  ;
+    box-shadow: 0 0 10px #1F7523 ;
+    
+  }
+  
+  #az{
+    grid-column: 19/20;
+    grid-row: 19/20;
+    background-color: transparent;
+  }
+  
+  
+  
