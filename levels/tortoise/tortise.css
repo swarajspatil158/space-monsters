@@ -38,7 +38,7 @@
     height: 58px;
     bottom: 50px;
     left: 50px;
-    background-image: url("./assets/ship.png");
+    background-image: url("../assets/ship.png");
     background-size: cover;
   
   }
@@ -67,7 +67,7 @@
   .container {  
       width: 60vw;
       height: 100vh;
-      background-image: url("./assets/space.webp");
+      background-image: url("../assets/space.webp");
       background-repeat: no-repeat;
       background-size: cover;
       display: flex;
@@ -80,7 +80,7 @@
     width:20vw;
     height:100vh;
     border-right:4px solid #1e90ff;
-    background-image: url("assets/rain2.gif");
+    background-image: url("../assets/rain2.gif");
     background-size: cover;
   
   }
